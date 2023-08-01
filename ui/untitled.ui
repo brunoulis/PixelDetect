@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>835</width>
     <height>600</height>
    </rect>
   </property>
@@ -105,6 +105,32 @@
           </property>
           <property name="text">
            <string>PushButton</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_4">
+          <property name="geometry">
+           <rect>
+            <x>390</x>
+            <y>10</y>
+            <width>93</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>PushButton</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>121</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>PixelDetect</string>
           </property>
          </widget>
         </widget>
