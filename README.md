@@ -6,4 +6,4 @@ PixelDetect le permite cargar una imagen y habilitar la detección deseada con u
 
 PixelDetect combina el poder de TensorFlow para el aprendizaje profundo, la versatilidad de OpenCV para el procesamiento de imágenes y la elegancia de PySide6 para la interfaz de usuario. Todo está diseñado para que su experiencia de usuario sea fluida y emocionante.
 
-No esperes más. Diviértete con PixelDetect y descubre lo que puede hacer. Diviértete creando, explorando y reconociendo objetos, caras y patrones en tus fotos favoritas. ¿Qué estás esperando?Descárgalo ahora y experimenta el fascinante mundo de la visión artificial con facilidad y estilo.
+
