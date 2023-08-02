@@ -1,11 +1,12 @@
 import sys
-import cv2
-import numpy as np
-import tensorflow as tf
-from PySide6.QtWidgets import QApplication, QMainWindow, QGraphicsScene, QGraphicsPixmapItem, QFileDialog
+from PySide6.QtCore import Qt, QRectF
+from PySide6.QtWidgets import QApplication, QMainWindow, QGraphicsScene, QGraphicsPixmapItem, QFileDialog 
 from PySide6.QtGui import QPixmap, QPalette, QColor, QImage
 from ui_mainwindow import Ui_MainWindow
-from PySide6.QtCore import Qt
+import tensorflow as tf
+import os
+import cv2
+import numpy as np
 
 
 class ImageRecognitionApp(QMainWindow, Ui_MainWindow):
@@ -23,7 +24,7 @@ class ImageRecognitionApp(QMainWindow, Ui_MainWindow):
         self.image_view.setScene(self.image_scene)
 
         # Cargar el modelo de TensorFlow
-        model_path = "ruta/del/modelo/ssd_mobilenet_v2_fpnlite_320x320_coco17_tpu-8/saved_model"
+        model_path = os.path.join("PixelDetect\ssd_mobilenet_v2_320x320_coco17_tpu-8\saved_model")
         self.model = tf.saved_model.load(model_path)
         self.categories = ["background", "person", "bicycle", "car", "motorcycle", "airplane", "bus", "train", "truck", "boat", "traffic light", "fire hydrant", "stop sign", "parking meter", "bench", "bird", "cat", "dog", "horse", "sheep", "cow", "elephant", "bear", "zebra", "giraffe", "backpack", "umbrella", "handbag", "tie", "suitcase", "frisbee", "skis", "snowboard", "sports ball", "kite", "baseball bat", "baseball glove", "skateboard", "surfboard", "tennis racket", "bottle", "wine glass", "cup", "fork", "knife", "spoon", "bowl", "banana", "apple", "sandwich", "orange", "broccoli", "carrot", "hot dog", "pizza", "donut", "cake", "chair", "couch", "potted plant", "bed", "dining table", "toilet", "tv", "laptop", "mouse", "remote", "keyboard", "cell phone", "microwave", "oven", "toaster", "sink", "refrigerator", "book", "clock", "vase", "scissors", "teddy bear", "hair drier", "toothbrush"]
 
@@ -35,7 +36,7 @@ class ImageRecognitionApp(QMainWindow, Ui_MainWindow):
             pixmap = QPixmap(self.image_path)
             self.image_scene.clear()
             self.image_scene.addItem(QGraphicsPixmapItem(pixmap))
-            self.image_view.fitInView(self.image_scene.itemsBoundingRect(), 0)
+            self.image_view.fitInView(self.image_scene, Qt.IgnoreAspectRatio)  # Modificado aquí
 
     def recognize(self):
         if self.image_path:
@@ -101,7 +102,7 @@ class ImageRecognitionApp(QMainWindow, Ui_MainWindow):
                 pixmap = QPixmap.fromImage(QImage(image_rgb.data, image_rgb.shape[1], image_rgb.shape[0], QImage.Format_RGB888))
                 self.image_scene.clear()
                 self.image_scene.addItem(QGraphicsPixmapItem(pixmap))
-                self.image_view.fitInView(self.image_scene.itemsBoundingRect(), 0)
+                self.image_view.fitInView(self.image_scene, Qt.IgnoreAspectRatio)  # Modificado aquí
 
             # Reconocimiento de Patrones
             elif recognition_type == "Patrones":
@@ -115,7 +116,7 @@ class ImageRecognitionApp(QMainWindow, Ui_MainWindow):
                 pixmap = QPixmap.fromImage(QImage(edges.data, edges.shape[1], edges.shape[0], QImage.Format_Grayscale8))
                 self.image_scene.clear()
                 self.image_scene.addItem(QGraphicsPixmapItem(pixmap))
-                self.image_view.fitInView(self.image_scene.itemsBoundingRect(), 0)
+                self.image_view.fitInView(self.image_scene, Qt.IgnoreAspectRatio)  # Modificado aquí
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
