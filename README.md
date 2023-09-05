@@ -1,9 +1,41 @@
+
 # PixelDetect
 
-PixelDetect es un pequeño proyecto de Python que utiliza las poderosas bibliotecas TensorFlow, OpenCV y PySide6 para diseñar una interfaz de usuario intuitiva con soporte de QtDesigner. Una aplicación que te permite el reconocimiento de objetos, el reconocimiento de rostros y el reconocimiento de patrones
+PixelDetect es un pequeño proyecto de Python que utiliza las poderosas bibliotecas TensorFlow, OpenCV y PySide6 para diseñar una interfaz de usuario intuitiva con soporte de QtDesigner. Una aplicación que te permite el reconocimiento de objetos, el reconocimiento de rostros y el reconocimiento de patrones.
 
-PixelDetect le permite cargar una imagen y habilitar la detección deseada con un solo clic. Ya sea que esté interesado en encontrar objetos en imágenes, reconocer caras o encontrar patrones específicos, esta aplicación le permitirá hacer precisamente eso. Es una herramienta versátil para explorar y experimentar con inteligencia artificial.
+## Características
 
-PixelDetect combina el poder de TensorFlow para el aprendizaje profundo, la versatilidad de OpenCV para el procesamiento de imágenes y la elegancia de PySide6 para la interfaz de usuario. Todo está diseñado para que su experiencia de usuario sea fluida y emocionante.
+* Reconocimiento de objetos: PixelDetect puede reconocer una amplia variedad de objetos en imágenes, incluidos animales, vehículos, personas y objetos cotidianos.
+* Reconocimiento de rostros: PixelDetect puede identificar rostros humanos en imágenes.
+* Reconocimiento de patrones: PixelDetect puede encontrar patrones específicos en imágenes, como líneas, formas y colores.
 
+## Instalación
+
+Para instalar PixelDetect, sigue estos pasos:
+
+1. Clona el repositorio de GitHub:
+
+
+git clone https://github.com/[tu_nombre]/pixeldetect.git
+```
+
+2. Instala las dependencias:
+
+```
+pip install -r requirements.txt
+
+
+## Uso
+
+Para ejecutar PixelDetect, abre una terminal en el directorio del proyecto y ejecuta el siguiente comando:
+
+
+python pixeldetect.py
+
+
+La aplicación se abrirá y podrás empezar a usarla.
+
+## Contribuciones
+
+Las contribuciones son bienvenidas. Si quieres contribuir a PixelDetect, puedes enviar un pull request a GitHub.
 
