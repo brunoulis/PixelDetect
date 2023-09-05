@@ -24,7 +24,7 @@ git clone https://github.com/[tu_nombre]/pixeldetect.git
 Para ejecutar PixelDetect, abre una terminal en el directorio del proyecto y ejecuta el siguiente comando:
 
 
-python pixeldetect.py
+python main.py
 
 
 La aplicación se abrirá y podrás empezar a usarla.
