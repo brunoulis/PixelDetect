@@ -17,12 +17,6 @@ Para instalar PixelDetect, sigue estos pasos:
 
 
 git clone https://github.com/[tu_nombre]/pixeldetect.git
-```
-
-2. Instala las dependencias:
-
-```
-pip install -r requirements.txt
 
 
 ## Uso
